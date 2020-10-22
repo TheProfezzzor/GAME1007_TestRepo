@@ -2,6 +2,11 @@
 #include <sdl.h>
 using namespace std;
 
+void testFunc()
+{
+	
+}
+
 int main(int argc, char* argv[])
 {
 	SDL_Window* p_window;
