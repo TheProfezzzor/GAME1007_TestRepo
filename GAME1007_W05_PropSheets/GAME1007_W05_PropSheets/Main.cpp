@@ -2,6 +2,13 @@
 #include <sdl.h>
 using namespace std;
 
+void fooFunction(int x)
+{
+	cout << "Invoked fooFunction..." << endl;
+	for (int i = 0; i < x; i++)
+		cout << "foo!" << endl;
+}
+
 int main(int argc, char* argv[])
 {
 	SDL_Window* p_window;
@@ -32,12 +39,17 @@ int main(int argc, char* argv[])
 			return 3;
 		}
 	}
-	SDL_SetRenderDrawColor(p_renderer, 255, 128, 64, 255); // 0-255 for each color channel
+	SDL_SetRenderDrawColor(p_renderer, 64, 128, 255, 255); // 0-255 for each color channel
 	SDL_RenderClear(p_renderer); // 'paints over' window with draw color
 	SDL_RenderPresent(p_renderer); // Refreshes window
+
+	fooFunction(5);
+
 	system("pause"); // Just to pause before quit.
 	SDL_DestroyRenderer(p_renderer);
 	SDL_DestroyWindow(p_window);
 	SDL_Quit();
 	return 0;
 }
+
+// Adding comments down here!
