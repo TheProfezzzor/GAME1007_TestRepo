@@ -46,8 +46,6 @@ int main(int argc, char* argv[])
 	}
 	SDL_SetRenderDrawColor(p_renderer, 64, 128, 255, 255); // 0-255 for each color channel
 	SDL_RenderClear(p_renderer); // 'paints over' window with draw color
-	SDL_RenderPresent(p_renderer); // Refreshes window	
-	SDL_RenderClear(p_renderer); // 'paints over' window with draw color
 	SDL_RenderPresent(p_renderer); // Refreshes window
 
 	testFunction();
